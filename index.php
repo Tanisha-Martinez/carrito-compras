@@ -6,11 +6,12 @@
 
 ?>
 <!-– Contenido del sitio -–> 
+        <?php if($mensaje!="") {?>
         <div class="alert alert-success">
             <?php echo($mensaje); ?>
             <a href="mostrarCarrito.php" class="badge badge-success">Ver carrito</a> 
         </div>
-
+        <?php }?>
         <div class="row">
         <?php 
             $sentencia=$pdo->prepare("SELECT * FROM `productos`");

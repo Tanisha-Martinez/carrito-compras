@@ -35,12 +35,36 @@
 
 
         </tr>
+        <?php $envio=35;?>
         <?php $total=$total+($producto['precio']*$producto['cantidad']); ?>
+        <?php $total2=$total+$envio; ?>
         <?php }?>
+        
+        <tr>
+            <td colspan="3" align="right"><h4>Envío</h4></td>
+            <td align="center">Q.<?php echo number_format($envio,2); ?></td>
+        </tr>
         <tr>
             <td colspan="3" align="right"><h3>Total</h3></td>
-            <td align="right"><h3>Q.<?php echo number_format($total,2); ?></h3</td>
+            <td align="center"><h3>Q.<?php echo number_format($total2,2); ?></h3</td>
             <td></td>
+        </tr>
+        
+        <tr>
+            <td colspan="5">
+            <form action="pagar.php" method="post">
+            <div class="alert alert-success" role="alert">
+            <div class="form-group">
+                <label for="my-input">Correo de contacto:</label>
+                <input id="email" name="email" class="form-control" type="email" 
+                placeholder="Escribe tu correo aqui." required>
+            </div>
+            <small id="emailHelp" class="form-text text-muted"> Los productos se enviarán a este correo.</small>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" value="proceder" 
+            name="btnAccion">Proceder a pagar >></button>
+            </form>
+            </td>
         </tr>
 
     </tbody>
