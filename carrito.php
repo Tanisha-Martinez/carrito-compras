@@ -49,7 +49,7 @@ if(isset($_POST['btnAccion'])){
                 'precio'  =>$precio
             );
             $_SESSION['carrito'][0]=$producto;
-            $mensaje= "Producto agregado al carrito.(1)";
+            $mensaje= "Producto agregado al carrito.";
         }else{
 
             $idProductos=array_column($_SESSION['carrito'],"id");
@@ -67,7 +67,7 @@ if(isset($_POST['btnAccion'])){
                 'precio'  =>$precio
             );
             $_SESSION['carrito'][$numeroProductos]=$producto;
-            $mensaje= "Producto agragado al carrito...(2)";
+            $mensaje= "Producto agregado al carrito.";
         }
     }
         //$mensaje= print_r($_SESSION,true);
