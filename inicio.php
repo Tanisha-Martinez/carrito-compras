@@ -19,23 +19,23 @@
             $listaProductos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
             //print_r($listaProductos);
         ?>
-        <?php foreach($listaProductos as $producto){  ?>
+        <?php foreach($listaProductos as $productos){  ?>
 
             <div class="col-3 mb-5">
                 <div class="card">
-                    <img src="<?php echo $producto['imagen'];?>" title="<?php echo $producto['nombre'];?>" 
-                    alt="<?php echo $producto['nombre'];?>" data-toggle="popover" data-trigger="hover"
-                    data-content="<?php echo $producto['descripcion'];?>" 
+                    <img src="<?php echo $productos['imagen'];?>" title="<?php echo $productos['nombre'];?>" 
+                    alt="<?php echo $productos['nombre'];?>" data-toggle="popover" data-trigger="hover"
+                    data-content="<?php echo $productos['descripcion'];?>" 
                     class="card-img-top">
                     <div class="card-body p-2">
-                        <span><?php echo $producto['nombre'];?></span>
-                        <h5 class="card-title text-truncate">Q.<?php echo $producto['precio'];?> </h5>
+                        <span><?php echo $productos['nombre'];?></span>
+                        <h5 class="card-title text-truncate">Q.<?php echo $productos['precio'];?> </h5>
                         <p class="card-text">Descripcion</p>
 
                     <form action="" method="post">
-                        <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['id'],CODIGO,KEY);?>">
-                        <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($producto['nombre'],CODIGO,KEY);?>">
-                        <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($producto['precio'],CODIGO,KEY);?>">
+                        <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($productos['id'],CODIGO,KEY);?>">
+                        <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($productos['nombre'],CODIGO,KEY);?>">
+                        <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($productos['precio'],CODIGO,KEY);?>">
                         <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,CODIGO,KEY);?>">
 
                         <button class="btn btn-sm btn-success" data-toggle="tooltip" name="btnAccion" 

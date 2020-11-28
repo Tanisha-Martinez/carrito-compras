@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/cabecera.css">
 </head>
 <body>
-    <form action="inicio.php" method="post">
+    <form action="crud.php" method="post">
         <h1 class="animate__animated animate__backInLeft">Creaciones Hilos de Amor</h1>
         <p>Usuario <input type="text" placeholder="ingrese su nombre" name="usuario"></p>
         <p>Contraseña <input type="password" placeholder="ingrese su contraseña" name="contraseña"></p>

@@ -7,9 +7,9 @@ define("USUARIO","root");
 define("PASSWORD","");
 define("BD","tienda");
 
-/*try {
+try {
     $connection = new PDO("mysql:host=".SERVIDOR.";dbname=".BD, USUARIO, PASSWORD);
 } catch (PDOException $e) {
     exit("Error: " . $e->getMessage());
-} */
+} 
 ?>
